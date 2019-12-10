@@ -1,0 +1,12 @@
+<nav class="dev" style="left: 0; top: 64px; line-height: inherit; position: absolute; height: 30px;">
+
+  <a style="margin-left: 3%;" routerLink="profile-details" routerLinkActive="activeLink"
+     [routerLinkActiveOptions]="{exact:true}">Details</a> |
+  <a routerLink="profile-message" routerLinkActive="activeLink"
+     >Message</a>
+</nav>
+<div style="margin-top: 50px;">
+  <div class="row" >
+    <router-outlet></router-outlet>
+  </div>
+</div>

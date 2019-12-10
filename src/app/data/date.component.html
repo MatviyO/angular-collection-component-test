@@ -1,0 +1,21 @@
+
+  <div class="col s3 ">
+    <div class="card like" appHover [ngClass]="{'active1': isActive}">
+      <div class="card-image">
+        <img src="{{cell?.picture.large}}">
+        <span class="card-title"
+              [ngClass]="{'marked': isMarked}"
+        >{{cell?.name.first}}</span>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+      </div>
+      <div class="card-action">
+        <a
+          (click)="onClick()"
+          class="waves-effect appHover light-blue lighten-3 btn">Subscribe</a>
+      </div>
+    </div>
+  </div>
+

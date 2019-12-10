@@ -1,0 +1,20 @@
+<div class="col s4 " *ngFor="let s of data2 ">
+  <div class="card like" appHover [ngClass]="{'active1': isActive}">
+    <div class="card-image">
+      <img src="{{s?.picture}}">
+      <span class="card-title"
+            [ngClass]="{'marked': isMarked}"
+      >{{s?.title}}</span>
+    </div>
+    <div class="card-content">
+      <p>{{s?.text}}</p>
+      <small>{{s?.date | date}}</small>
+    </div>
+    <div class="card-action">
+      <a
+        (click)="onClick()"
+        class="waves-effect appHover light-blue lighten-3 btn">Subscribe</a>
+    </div>
+  </div>
+</div>
+
