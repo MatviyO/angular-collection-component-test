@@ -1,17 +1,18 @@
 <div class="row">
-  <div class="input-field col s9">
-    <input [(ngModel)]="size"   id="first_name2" type="text" class="validate">
-    <label class="active" for="first_name2">Amount Users</label>
-    <a
-      (click)="onChange()"
-      class="waves-effect appHover light-blue lighten-3 btn">Edit</a>
+  <div class="form-group">
+    <label class="form-control " for="first_name2">Amount Users :</label>
+    <input [(ngModel)]="size"   id="first_name2" type="text" class=" form-control validate">
+
+
+    <button (click)="onChange()" type="button" class="btn btn-dark form-control">Edit</button>
   </div>
-  <button class="btn btn-default" (click)="save()">Сохранить</button>
+
 </div>
+<button class="btn btn-dark" (click)="save()">Save</button>
 <div style="position: absolute;
   left: 0;
   right: 0;
   text-align: center;
   bottom: 10px;">
-  <button class="waves-effect appHover light-blue lighten-3 btn" (click)="goHome()">Go Home</button>
+  <button class="btn btn-dark" (click)="goHome()">Go Home</button>
 </div>

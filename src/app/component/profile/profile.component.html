@@ -1,10 +1,14 @@
-<nav class="dev" style="left: 0; top: 64px; line-height: inherit; position: absolute; height: 30px;">
 
-  <a style="margin-left: 3%;" routerLink="profile-details" routerLinkActive="activeLink"
-     [routerLinkActiveOptions]="{exact:true}">Details</a> |
-  <a routerLink="profile-message" routerLinkActive="activeLink"
-     >Message</a>
-</nav>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" routerLink="profile-details" role="tab" aria-controls="home" aria-selected="true">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" routerLink="profile-message" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+  </li>
+
+</ul>
+
 <div style="margin-top: 50px;">
   <div class="row" >
     <router-outlet></router-outlet>

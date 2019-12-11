@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {LocalService} from '../local.service';
 
 @Component({
-  selector: 'app-profile-message',
+  selector: '',
   templateUrl: './profile-message.component.html',
   styleUrls: ['./profile-message.component.css'],
   providers: [LocalService]

@@ -1,21 +1,11 @@
 
-  <div class="col s3 ">
-    <div class="card like" appHover [ngClass]="{'active1': isActive}">
-      <div class="card-image">
-        <img src="{{cell?.picture.large}}">
-        <span class="card-title"
-              [ngClass]="{'marked': isMarked}"
-        >{{cell?.name.first}}</span>
-      </div>
-      <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action">
-        <a
-          (click)="onClick()"
-          class="waves-effect appHover light-blue lighten-3 btn">Subscribe</a>
-      </div>
-    </div>
-  </div>
 
+<div class="col mb-sm-3 ">
+      <div class="card h-100 text-white bg-dark " appHover [ngClass]="{'active1': isActive}" style="border: none!important;">
+        <img src="{{cell?.picture.large}}" class="card-img-top" alt="{{cell?.name.first}}">
+        <div class="card-body">
+          <h5 class="card-title">{{cell?.name.first}}</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+</div>
