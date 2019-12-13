@@ -1,14 +1,6 @@
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" appHover>
-    <a class="nav-link " id="home-tab" data-toggle="tab" routerLink="car" role="tab" aria-controls="car" aria-selected="true">Car</a>
-  </li>
-  <li class="nav-item" appHover>
-    <a class="nav-link" id="profile-tab" data-toggle="tab" routerLink="car-form" role="tab" aria-controls="car-form" aria-selected="false">Car-form</a>
-  </li>
 
-</ul>
-
+<app-cars-form></app-cars-form>
 <div class="list-group" >
-  <router-outlet></router-outlet>
+  <app-car  [car]="c" *ngFor="let c of (carsState | async).cars"></app-car>
 </div>

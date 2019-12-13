@@ -1,15 +1,15 @@
 
 <div class="card "
-     [ngClass]="{'list-group-item-danger': date.isSold}"
+     [ngClass]="{'list-group-item-danger': car.isSold}"
 
-     style="width: 18rem; margin-top: 2%;" appHover *ngFor="let date of cars" >
-  <img src="{{date.img}}" class="card-img-top" alt="">
+     style="width: 18rem; margin-top: 2%;" appHover  >
+  <img src="{{car.img}}" class="card-img-top" alt="">
   <div class="card-body">
-    <h5 class="card-title">{{date.name}}</h5>
-    <p class="card-text">{{date.model}}</p>
+    <h5 class="card-title">{{car.name}}</h5>
+    <p class="card-text">{{car.model}}</p>
     <hr>
-    <button type="button" [disabled]=" date.isSold"  class="btn btn-dark btn-sm">Buy </button>
-    <button type="button" class="btn btn-danger btn-sm">Delete </button>
-    <small>{{date.date}}</small>
+    <button type="button" (click)="onBuy()" [disabled]=" car.isSold"  class="btn btn-dark btn-sm">Buy </button>
+    <button type="button" (click)="onDelete()" class="btn btn-danger btn-sm">Delete </button>
+    <small>{{car.date}}</small>
   </div>
 </div>

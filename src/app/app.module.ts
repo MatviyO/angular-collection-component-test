@@ -23,6 +23,8 @@ import {BoldDirective} from './directive/bold.directive';
 import { CarsFormComponent } from './component/car-list/cars-form/cars-form.component';
 import { CarComponent } from './component/car-list/car/car.component';
 import { CarListComponent } from './component/car-list/car-list.component';
+import {StoreModule} from '@ngrx/store';
+import {carsReducer} from './component/car-list/redux/cars.reducer';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,10 @@ import { CarListComponent } from './component/car-list/car-list.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatMenuModule
+    StoreModule.forRoot({
+      carPage: carsReducer
+    })
+
   ],
   providers: [MServiceService, OutGuard, InputGuard],
   bootstrap: [AppComponent]
