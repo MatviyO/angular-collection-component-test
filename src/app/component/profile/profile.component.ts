@@ -1,5 +1,5 @@
 import {Component, OnInit, Output} from '@angular/core';
-import {MServiceService} from '../../m-service.service';
+import {MServiceService} from '../../shared/m-service.service';
 import {LocalService} from './local.service';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MServiceService} from '../../m-service.service';
+import {MServiceService} from '../../shared/m-service.service';
 import {Router} from '@angular/router';
 import {Observable} from 'rxjs';
 

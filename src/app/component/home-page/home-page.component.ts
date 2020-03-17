@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MServiceService} from '../../m-service.service';
+import {MServiceService} from '../../shared/m-service.service';
 
 @Component({
   selector: 'app-home-page',

@@ -9,6 +9,7 @@ import {ProfileComponent} from './component/profile/profile.component';
 import {OutGuard} from './guards/out.guard';
 import {InputGuard} from './guards/input.guard';
 import {CarListComponent} from './component/car-list/car-list.component';
+import {TodoComponent} from './component/todo/todo.component';
 
 const profileRoutes: Routes = [
   {path: 'profile-details', component: ProfileDetailsComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'info', component: InfoComponent, canDeactivate: [OutGuard], canActivate: [InputGuard]},
   {path: 'profile', component: ProfileComponent, children: profileRoutes},
   {path: 'car-list', component: CarListComponent},
+  {path: 'todo', component: TodoComponent},
   {path: '', component: HomePageComponent},
   { path: '**', component: NotFoundComponent }
 ];

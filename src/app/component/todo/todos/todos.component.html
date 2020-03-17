@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let c of todos; let i = index">
+    <span>
+      <input type="checkbox">
+      <strong>{{i + 1}}</strong>
+      {{c.title}}
+      <small>{{c.date}}</small>
+      <button class="rm" type="submit">&times;;</button>
+    </span>
+  </li>
+
+</ul>
