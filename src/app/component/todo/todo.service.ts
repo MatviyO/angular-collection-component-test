@@ -17,7 +17,7 @@ export class TodoService {
   constructor(private http: HttpClient ) {
   }
   fetchTodos(): Observable<Todo[]> {
-    return this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos')
+    return this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos?_limit=5')
       .pipe(tap((todos) => {
         this.todos = todos;
       }));
@@ -29,5 +29,8 @@ export class TodoService {
   }
   removeTodo(id: number) {
     this.todos = this.todos.filter(t => t.id !== id);
+  }
+  addTodo(todo: Todo) {
+    this.todos.push(todo);
   }
 }

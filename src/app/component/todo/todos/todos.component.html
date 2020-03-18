@@ -1,16 +1,16 @@
 <div *ngIf="!isLoading">
+  <div class="filter">
+    <input [(ngModel)]="searchString" placeholder="filter" type="text">
+  </div>
   <ul *ngIf="todoService.todos.length; else noTodos">
-    <li *ngFor="let c of todoService.todos; let i = index">
+    <li *ngFor="let c of todoService.todos | todosFilter ; let i = index">
     <span [class.done]="c.completed">
       <input type="checkbox" [checked]="c.completed" (change)="onChange(c.id)">
       <strong>{{i + 1}}</strong>{{c.title}}
     </span>
-
       <small>{{c.date | date }}</small>
       <button (click)="removeTodo(c.id)" class="rm" type="submit">&times;;</button>
-
     </li>
-
   </ul>
   <ng-template #noTodos>
     <p>No content</p>

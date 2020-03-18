@@ -26,6 +26,8 @@ import {StoreModule} from '@ngrx/store';
 import {carsReducer} from './component/car-list/redux/cars.reducer';
 import { TodoComponent } from './component/todo/todo.component';
 import { TodosComponent } from './component/todo/todos/todos.component';
+import { TodoFormComponent } from './component/todo/todo-form/todo-form.component';
+import {TodosFilterPipe} from './pipe/todos-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { TodosComponent } from './component/todo/todos/todos.component';
     CarComponent,
     CarListComponent,
     TodoComponent,
-    TodosComponent
+    TodosComponent,
+    TodoFormComponent,
+    TodosFilterPipe
   ],
   imports: [
     BrowserModule,
